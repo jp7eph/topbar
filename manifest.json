@@ -12,5 +12,9 @@
                 "content-script.js"
             ]
         }
+    ],
+    "options_page": "options.html",
+    "permissions": [
+        "storage"
     ]
 }
