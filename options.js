@@ -13,6 +13,5 @@ function Load() {
     });
 }
 
+document.addEventListener('DOMContentLoaded', Load); 
 document.getElementById('save').addEventListener('click', Save);
-
-Load();
