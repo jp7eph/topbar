@@ -8,8 +8,6 @@ function Save() {
 function Load() {
     chrome.storage.local.get('option_json', function (items) {
         document.getElementById('option-json').value = items.option_json;
-        // const option_json = JSON.parse(items.option_json);
-        // console.log({ option_json })
     });
 }
 
