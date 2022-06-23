@@ -11,11 +11,11 @@ getStorage('option_json').then((data) => {
 
 function displayBar() {
     var host = location.host;
-    console.log('[TopBar] hostname: ' + host);
+    console.log('[topbar] hostname: ' + host);
     var matched_filter;
 
     if (typeof filters === 'undefined') {
-        console.log('[TopBar] Failed to get option_json');
+        console.log('[topbar] Failed to get option_json');
     } else {
         matched_filter = filters.find((f) => f.hostname === host);
     }
