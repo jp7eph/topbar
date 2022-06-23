@@ -1,0 +1,20 @@
+[
+    {
+        "hostname": "www.google.com",
+        "options": {
+            "text": "Google",
+            "font_size": 2,
+            "font_color": "FFF",
+            "backgroud_color": "F00"
+        }
+    },
+    {
+        "hostname": "www.kddi.com",
+        "options": {
+            "text": "KDDI",
+            "font_size": 2,
+            "font_color": "FFF",
+            "backgroud_color": "00F"
+        }
+    }
+]
