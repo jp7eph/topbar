@@ -29,7 +29,7 @@ function displayBar() {
         bar.style.textAlign = 'center';
         bar.style.fontSize = matched_filter.options.font_size + 'em';
         bar.style.color = '#' + matched_filter.options.font_color;
-        bar.style.backgroundColor = '#' + matched_filter.options.backgroud_color;
+        bar.style.backgroundColor = '#' + matched_filter.options.background_color;
 
         var body = document.body;
         body.insertBefore(bar, body.firstChild)
