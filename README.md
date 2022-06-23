@@ -16,7 +16,8 @@
 
 コンフィグの仕方。
 
-![オプションへの行き方](https://github.com/jp7eph/topbar/blob/images/option.png)
-
 1. Chrome右上の拡張機能ボタンから `topbar` を選択し、 `オプション` を選択する。
 1. 入力フォームにJSONを入力する。参考のオプション設定は [./option_example.json](./option_example.json) を参照のこと。
+
+![オプションへの行き方](https://github.com/jp7eph/topbar/blob/images/option.png)
+
