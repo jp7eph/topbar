@@ -5,7 +5,7 @@
             "text": "Google",
             "font_size": 2,
             "font_color": "FFF",
-            "backgroud_color": "F00"
+            "background_color": "F00"
         }
     },
     {
@@ -14,7 +14,7 @@
             "text": "KDDI",
             "font_size": 2,
             "font_color": "FFF",
-            "backgroud_color": "00F"
+            "background_color": "00F"
         }
     }
 ]
