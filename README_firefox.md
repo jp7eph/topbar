@@ -1,4 +1,4 @@
-# Google Chrome向けマニュアル
+# Firefox向けマニュアル
 
 ## How to install
 
