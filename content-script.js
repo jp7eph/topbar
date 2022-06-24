@@ -22,17 +22,25 @@ function displayBar() {
 
     if (typeof matched_filter != 'undefined') {
         let bar = document.createElement('header');
+        bar.id = 'topbar';
         bar.innerText = matched_filter.options.text;
-        bar.style.position = 'sticky';
+        bar.style.position = 'fixed';
         bar.style.top = 0;
+        bar.style.left = 0;
+        bar.style.width = '100%';
         bar.style.zIndex = 2147483646;
         bar.style.textAlign = 'center';
         bar.style.fontSize = matched_filter.options.font_size + 'em';
         bar.style.color = '#' + matched_filter.options.font_color;
         bar.style.backgroundColor = '#' + matched_filter.options.background_color;
 
+        // Bodyの直下Elementとして挿入
         var body = document.body;
         body.insertBefore(bar, body.firstChild)
+
+        // topbarが被ってしまうのでBodyにPaddingを入れる
+        var bar_height = document.getElementById('topbar').clientHeight
+        body.style.paddingTop = bar_height + 'px';
     }
 }
 
