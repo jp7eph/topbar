@@ -16,5 +16,14 @@
             "font_color": "FFF",
             "background_color": "00F"
         }
+    },
+    {
+        "hostname": "127.0.0.1:8080",
+        "options": {
+            "text": "localtest",
+            "font_size": 2,
+            "font_color": "FFF",
+            "background_color": "000"
+        }
     }
 ]
