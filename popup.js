@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', onLoad);
 
 function onLoad() {
     var btn_disable = document.getElementById('btn_disable');
-    btn_disable.addEventListener('click', onClickDisable)
+    btn_disable.addEventListener('click', onClickDisable);
 };
 
 function onClickDisable() {

@@ -9,6 +9,7 @@ getStorage('option_json').then((data) => {
     displayBar();
 })
 
+// JSONパースのためにオプション文字列に含まれている改行文字を除去
 var removeCR = function (jsonString) {
     return jsonString
         .replace(/(\r\n)/g, '')
@@ -51,6 +52,7 @@ function displayBar() {
     }
 }
 
+// メッセージパッシングを受信して振り分けるコントローラ
 chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
     switch (request.message) {
         case 'disable_topbar':
