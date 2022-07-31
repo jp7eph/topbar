@@ -9,7 +9,7 @@ function onLoad() {
 
 function onClickDisable() {
     chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
-        chrome.tabs.sendMessage(tabs[0].id, { message: 'disable_topbar' });
+        chrome.tabs.sendMessage(tabs[0].id, { message: 'remove_bar' });
     });
 };
 

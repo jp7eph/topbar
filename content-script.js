@@ -54,7 +54,7 @@ function displayBar() {
 // メッセージパッシングを受信して振り分けるコントローラ
 chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
     switch (request.message) {
-        case 'disable_topbar':
+        case 'remove_bar':
             removeBar();
         case 'get_host':
             sendResponse(getHost());
