@@ -9,6 +9,13 @@ getStorage('option_json').then((data) => {
     displayBar();
 })
 
+var removeCR = function (jsonString) {
+    return jsonString
+        .replace(/(\r\n)/g, '')
+        .replace(/(\r)/g, '')
+        .replace(/(\n)/g, '');
+};
+
 function displayBar() {
     var host = location.host;
     console.log('[topbar] hostname: ' + host);
@@ -44,9 +51,16 @@ function displayBar() {
     }
 }
 
-var removeCR = function (jsonString) {
-    return jsonString
-        .replace(/(\r\n)/g, '')
-        .replace(/(\r)/g, '')
-        .replace(/(\n)/g, '');
+chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
+    switch (request.message) {
+        case 'disable_topbar':
+            removeBar();
+    };
+});
+
+function removeBar() {
+    var bar = document.getElementById('topbar');
+    if (bar != null) {
+        bar.hidden = true;
+    }
 };

@@ -1,6 +1,6 @@
 {
     "name": "topbar",
-    "version": "0.1.0",
+    "version": "0.3.0",
     "manifest_version": 2,
     "description": "Display the top bar with the specified URI",
     "content_scripts": [
@@ -13,6 +13,10 @@
             ]
         }
     ],
+    "browser_action": {
+        "default_title": "topbar",
+        "default_popup": "popup.html"
+    },
     "options_ui": {
         "page": "options.html",
         "browser_style": true
