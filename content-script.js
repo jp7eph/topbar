@@ -63,6 +63,6 @@ chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
 function removeBar() {
     var bar = document.getElementById('topbar');
     if (bar != null) {
-        bar.hidden = true;
+        bar.remove();
     }
 };
