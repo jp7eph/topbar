@@ -18,8 +18,7 @@ var removeCR = function (jsonString) {
 };
 
 function displayBar() {
-    var host = location.host;
-    console.log('[topbar] hostname: ' + host);
+    var host = getHost();
     var matched_filter;
 
     if (typeof filters === 'undefined') {
@@ -57,6 +56,8 @@ chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
     switch (request.message) {
         case 'disable_topbar':
             removeBar();
+        case 'get_host':
+            sendResponse(getHost());
     };
 });
 
@@ -66,3 +67,7 @@ function removeBar() {
         bar.remove();
     }
 };
+
+function getHost() {
+    return location.host;
+}
