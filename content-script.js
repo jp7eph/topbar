@@ -9,6 +9,14 @@ getStorage('option_json').then((data) => {
     displayBar();
 })
 
+// JSONパースのためにオプション文字列に含まれている改行文字を除去
+var removeCR = function (jsonString) {
+    return jsonString
+        .replace(/(\r\n)/g, '')
+        .replace(/(\r)/g, '')
+        .replace(/(\n)/g, '');
+};
+
 function displayBar() {
     var host = location.host;
     console.log('[topbar] hostname: ' + host);
@@ -44,9 +52,17 @@ function displayBar() {
     }
 }
 
-var removeCR = function (jsonString) {
-    return jsonString
-        .replace(/(\r\n)/g, '')
-        .replace(/(\r)/g, '')
-        .replace(/(\n)/g, '');
+// メッセージパッシングを受信して振り分けるコントローラ
+chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
+    switch (request.message) {
+        case 'disable_topbar':
+            removeBar();
+    };
+});
+
+function removeBar() {
+    var bar = document.getElementById('topbar');
+    if (bar != null) {
+        bar.remove();
+    }
 };
